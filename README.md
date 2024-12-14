@@ -25,7 +25,7 @@ To set up the Vocal Mastering Application locally, follow these steps:
 
 ### Clone the Repository:
 ```bash
-git clone https://github.com/yourusername/vocal-mastering.git
+git clone https://github.com/Amirreza-Jabbari/vocal-mastering.git
 cd vocal-mastering
 ```
 
@@ -73,7 +73,7 @@ Contributions are welcome! If you have suggestions for improvements or new featu
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-## Sample Screenshot
+## result Screenshot
 [![result.png](https://i.postimg.cc/3NDJPFcs/result.png)](https://postimg.cc/sGsrW7ym)
 
 ---
