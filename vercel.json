@@ -1,0 +1,15 @@
+{
+    "builds": [
+        {
+            "src": "vocal_mastering/wsgi.py",
+            "use": "@vercel/python",
+            "config": {"runtime": "python3.12" }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/vocal_mastering/wsgi.py"
+        }
+    ]
+}

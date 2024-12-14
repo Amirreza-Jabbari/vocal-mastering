@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="result-container">
+    {% if processing_success %}
+        <h1>Vocal Mastering Completed</h1>
+        
+        <div class="audio-section">
+            <h2>Original Audio</h2>
+            <audio controls>
+                <source src="{{ vocal_mastering.original_audio.url }}" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="audio-section">
+            <h2>Mastered Audio</h2>
+            <audio controls>
+                <source src="{{ vocal_mastering.mastered_audio.url }}" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="download-links">
+            <a href="{{ vocal_mastering.original_audio.url }}" download class="btn">Download Original</a>
+            <a href="{{ vocal_mastering.mastered_audio.url }}" download class="btn">Download Mastered</a>
+        </div>
+    {% else %}
+        <h1>Processing Failed</h1>
+        <p>We were unable to process your audio file. Please try again.</p>
+    {% endif %}
+</div>
+
+<style>
+    .result-container {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .audio-section {
+        margin: 20px 0;
+    }
+    .audio-section audio {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+    .download-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #45a049;
+    }
+</style>
+{% endblock %}
